@@ -31,9 +31,9 @@ Examples of strict mode in action:
 
 ```js
 'use strict';
-// Assuming a global variable mistypedVariable exists
+                       // Assuming a global variable mistypedVariable exists
 mistypeVariable = 17;  // this line throws a ReferenceError due to the 
-// misspelling of variable
+                       // misspelling of variable
 ```
 
 ```js
@@ -67,17 +67,17 @@ ES6 introduces a new syntax for writing anonymous functions in JavaScript. It ha
 ```js
 // Function Declaration
 function sayHello() {
-console.log('Hello World!');  // Block of statements
+  console.log('Hello World!');  // Block of statements
 }
 
 // Function Expression
 const sayHello = function() {
-console.log('Hello World!');  // Block of statements
+  console.log('Hello World!');  // Block of statements
 }
 
 // Arrow function expression
 const sayHello = () => {
-console.log('Hello World!');  // Block of statements
+  console.log('Hello World!');  // Block of statements
 }
 
 // Arrow function expression (compact)
@@ -95,17 +95,17 @@ const greetWorld = greeting => `${greeting} World!`;  // Expression
 ```js
 // Function Declaration
 function add(x, y) {
-return x + y;
+  return x + y;
 }
 
 // Function Expression
 const add = function(x, y) {
-return x + y;
+  return x + y;
 }
 
 // Arrow function expression
 const add = (x, y) => {
-return x + y;
+  return x + y;
 }
 
 // Arrow function expression with implicit return
@@ -118,20 +118,20 @@ const add = (x, y) => x + y;
 
 ```js
 function addFive(num) {
-return 5 + num;
+  return 5 + num;
 }
 
 
 .......
 function divide(num1, num2) {
-return num1 / num2;
+  return num1 / num2;
 }
 
-........
+  ........
 
 function whoIsTheBestIA() {
-let iaName = 'Alanoud';
-console.log(iaName);
+  let iaName = 'Alanoud';
+  console.log(iaName);
 }
 
 
@@ -139,16 +139,16 @@ Your solution:
 
 ```js
 sol:
-let addFive=num=>  5 + num;
+ let addFive=num=>  5 + num;
 
 console.log(addFive(4)); 
 ......
 sol: let divide=(num1, num2) => num1 / num2;
-console.log(divide(4,4)); 
-.....
-sol: let whoIsTheBestIA=() =>{let iaName = 'Alanoud';
-console.log(iaName);}
-console.log(whoIsTheBestIA()); 
+  console.log(divide(4,4)); 
+  .....
+   sol: let whoIsTheBestIA=() =>{let iaName = 'Alanoud';
+    console.log(iaName);}
+    console.log(whoIsTheBestIA()); 
 
 ```
 
@@ -166,7 +166,7 @@ Your solution:
 
 ```js
 let fullName=function(first,last){
-return `${first} ${last}`
+   return `${first} ${last}`
 }
 console.log(fullName('Ashwag','saud'));
 let fullName =(first,last)=> {return`${first} ${last}`}
@@ -182,7 +182,7 @@ console.log(fullName('Ashwag','saud'));
 
 ```js
 function sayHello(name = "World") {
-console.log("Hello " + name);
+  console.log("Hello " + name);
 }
 
 sayHello();
@@ -192,9 +192,9 @@ Your solution:
 
 ```js
 let sayHello=(name = "World") =>  console.log("Hello " + name);
-
-
-sayHello();
+  
+  
+  sayHello();
 ```
 
 **Resources:**
@@ -220,13 +220,13 @@ const instructors = ['Usman', 'Marc', 'Alanoud'];
 
 // Print each instructor
 instructors.forEach(function(element) {
-console.log(element);
+  console.log(element);
 });
 
 
 // Print each instructor along with their Array index
 instructors.forEach(function(element, index) {
-console.log(element, index);
+  console.log(element, index);
 });
 ```
 
@@ -238,61 +238,61 @@ const instructorsCopy = [];
 
 // For Loop
 for (let i = 0; i < instructors.length; i++) {
-instructorsCopy.push(instructors[i]);
+  instructorsCopy.push(instructors[i]);
 }
 
 // forEach Loop
 instructors.forEach(function(item){
-instructorsCopy.push(item);
+  instructorsCopy.push(item);
 });
 ```
 
 #### Lab: (15 mins)
 
 1. Say Hi
-```js
-const friends = ["Mansour", "Munira", "Ahmed"];
+    ```js
+    const friends = ["Mansour", "Munira", "Ahmed"];
 
-// For each friend in friends, print "Hi friendName!"
-// Write your solution here
-const friends = ["Mansour", "Munira", "Ahmed"];
+    // For each friend in friends, print "Hi friendName!"
+    // Write your solution here
+    const friends = ["Mansour", "Munira", "Ahmed"];
 friends.forEach(function(item){
-console.log(`Hi ${item}`)
+    console.log(`Hi ${item}`)
 })
-```
+    ```
 2. Crazy Numbers
-```js
-// Thats an array with crazy numbers we cant read 😯
-const nums = [103440, 3799.2663, 3.14159265359, 859494, 59439];
-let total = 0;
+    ```js
+    // Thats an array with crazy numbers we cant read 😯
+    const nums = [103440, 3799.2663, 3.14159265359, 859494, 59439];
+    let total = 0;
 
 let total = 0;
 nums.forEach(function(item){
-total+=item;
+    total+=item;
 
 })
 console.log(total);
 
 
-```
+    ```
 3. Crazy number again!!
-```js
-// These crazy numbers now are strings 😯 😯  !!  
-const stringNumbers = ["103440", "3799.2663", "3.14159265359", "859494", "59439"];
-let totalNumbersUnder4000 = 0;
+    ```js
+    // These crazy numbers now are strings 😯 😯  !!  
+    const stringNumbers = ["103440", "3799.2663", "3.14159265359", "859494", "59439"];
+    let totalNumbersUnder4000 = 0;
 
-const stringNumbers = ["103440", "3799.2663", "3.14159265359", "859494", "59439"];
+    const stringNumbers = ["103440", "3799.2663", "3.14159265359", "859494", "59439"];
 let totalNumbersUnder4000 = 0;
 let k=parseFloat (stringNumbers);
 console.log(k);
 let m=[];
 for(let i=0;i<m.length;i++){
-m.push(Integer.parseInt(str));
-intarray[i]=Integer.parseInt(str)
-console.log(m);
-console.log(intarray);
+    m.push(Integer.parseInt(str));
+    intarray[i]=Integer.parseInt(str)
+    console.log(m);
+    console.log(intarray);
 }
-```
+    ```
 
 **Resources:**
 
@@ -311,47 +311,47 @@ The `map()` method creates a new array with the results of calling a provided fu
 #### Lab: (30 mins)
 
 1. Multiply by 100
-```js
-const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-let times100 = [];
-console.log(times100);
-var times100 = nums.map(function (item) {
-return item*100
-}); 
-```
+    ```js
+    const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+ 
+    let times100 = [];
+  console.log(times100);
+    var times100 = nums.map(function (item) {
+        return item*100
+      }); 
+    ```
 2. Capitalize
-Capitalize all the strings in the IA's array and store them in the array capitalizedIA.
+    Capitalize all the strings in the IA's array and store them in the array capitalizedIA.
 
-```js
-const iAS = ['alanoud', 'khalid', 'shaima', 'hakami'];
-let capitalizedIAs = [];
-var capitalizedIAs = iAS.map(function (item) {
-return item.toUpperCase();
-});   
-console.log(capitalizedIAs);
+    ```js
+    const iAS = ['alanoud', 'khalid', 'shaima', 'hakami'];
+    let capitalizedIAs = [];
+    var capitalizedIAs = iAS.map(function (item) {
+    return item.toUpperCase();
+  });   
+    console.log(capitalizedIAs);
 
 
 
-```
+    ```
 3. Abbreviations
-```js
-const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    ```js
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-let dayAbbreviations = days.map(function(item){
-return item.slice(0,3);});console.log(dayAbbreviations);
+    let dayAbbreviations = days.map(function(item){
+    return item.slice(0,3);});console.log(dayAbbreviations);
 
+    
 
-
-```
+    ```
 4. century20
-```js
-const years = [1989, 2015, 2000, 1999, 2013, 1973, 2012];
-let century20 =  []; 
-let century20 = years.filter(function(item){
-return item<=2000;
-});console.log(century20);
-```
+    ```js
+    const years = [1989, 2015, 2000, 1999, 2013, 1973, 2012];
+    let century20 =  []; 
+    let century20 = years.filter(function(item){
+    return item<=2000;
+   });console.log(century20);
+    ```
 
 
 ### Filter: Team Study (30 mins)
@@ -366,34 +366,34 @@ The `filter()` method creates a new array with all elements that pass the test i
 #### Lab: (15 mins)
 
 1. Only get the numbers that are divisible by 3
-```js
-const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-var result = numss.filter(function(number) {
-return (number % 3==0);
-});console.log(result);
-```
+    ```js
+    const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  var result = numss.filter(function(number) {
+    return (number % 3==0);
+  });console.log(result);
+    ```
 2. Create an array of names (maybe use 3 of your friends)
 
-Requirements:
+    Requirements:
 
-1. Use filter to return the names with the letter "a" in them
-2. Use Arrow function
-3. Use implicit return
-```js
-const names = ["Sara", "Abdulrahman", "Eman"];var result = names.filter(function(item) {
-return item.includes("a");
-});console.log(result);
-```
+    1. Use filter to return the names with the letter "a" in them
+    2. Use Arrow function
+    3. Use implicit return
+    ```js
+    const names = ["Sara", "Abdulrahman", "Eman"];var result = names.filter(function(item) {
+    return item.includes("a");
+  });console.log(result);
+    ```
 3. century20
-```js
-const years = [1989, 2015, 2000, 1999, 2013, 1973, 2012];
-let century20 = []; 
+    ```js
+    const years = [1989, 2015, 2000, 1999, 2013, 1973, 2012];
+    let century20 = []; 
 
-var summ = numsz.reduce(function(sum,item) {
-return sum+=item;
-});console.log(summ);
+  var summ = numsz.reduce(function(sum,item) {
+    return sum+=item;
+  });console.log(summ);
 
-```
+    ```
 
 
 ### Reduce: Team Study (30 mins)
@@ -409,44 +409,44 @@ The `reduce()` method executes a reducer function (that you provide) on each ele
 #### Lab: (15 mins)
 
 1. Sum
-```js
-const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let sum;
-var summ = numsz.reduce(function(sum,item) {
-return sum+=item; });console.log(summ); 
-```
+    ```js
+    const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let sum;
+    var summ = numsz.reduce(function(sum,item) {
+    return sum+=item; });console.log(summ); 
+    ```
 2. Crazy Numbers
-```js
-// Thats an array with crazy numbers we cant read 😯
-const nums = [103440, 3799.2663, 3.14159265359, 859494, 59439];
-let total = 0;
-var totalNumbersUnderr4000 = stringNumberss.reduce(function(sum,item) {
-totalNumbersUnderr4000=parseFloat(stringNumberss);
-console.log(totalNumbersUnderr4000);
-if(item<=4000){
-sum+=item;
-}
-});
+    ```js
+    // Thats an array with crazy numbers we cant read 😯
+    const nums = [103440, 3799.2663, 3.14159265359, 859494, 59439];
+    let total = 0;
+    var totalNumbersUnderr4000 = stringNumberss.reduce(function(sum,item) {
+    totalNumbersUnderr4000=parseFloat(stringNumberss);
+    console.log(totalNumbersUnderr4000);
+    if(item<=4000){
+        sum+=item;
+    }
+  });
 
 console.log(totalNumbersUnderr4000);
 
-// Sum all the numbers in nums and save the result in total
-// Write your solution here
-```
+    // Sum all the numbers in nums and save the result in total
+    // Write your solution here
+    ```
 3. Crazy number again!!
-```js
-// These crazy numbers now are strings 😯 😯  !!  
-const stringNumbers = ["103440", "3799.2663", "3.14159265359", "859494", "59439"];
-var totalNumbersUnderr4000 = stringNumberss.reduce(function(sum,item) {
-totalNumbersUnderr4000=parseFloat(stringNumberss);
-console.log(totalNumbersUnderr4000);
-if(item<=4000){
-sum+=item;
-}
-});
+    ```js
+    // These crazy numbers now are strings 😯 😯  !!  
+    const stringNumbers = ["103440", "3799.2663", "3.14159265359", "859494", "59439"];
+    var totalNumbersUnderr4000 = stringNumberss.reduce(function(sum,item) {
+    totalNumbersUnderr4000=parseFloat(stringNumberss);
+    console.log(totalNumbersUnderr4000);
+    if(item<=4000){
+        sum+=item;
+    }
+  });
 
 console.log(totalNumbersUnderr4000);
-```
+    ```
 
 ### Keep Going
 
@@ -464,18 +464,18 @@ There's a sale going on! Create a variable called `discountProducts` that takes 
 
 ```js
 const products = [
-{name: 'flower vase', price: 75},
-{name: 'lamp', price: 85},
-{name: 'jar of honey', price: 95},
-{name: 'coil', price: 65},
-{name: 'lumber', price: 55}
+  {name: 'flower vase', price: 75},
+  {name: 'lamp', price: 85},
+  {name: 'jar of honey', price: 95},
+  {name: 'coil', price: 65},
+  {name: 'lumber', price: 55}
 ];
 
 
 let discountProducts = products.map(function(item){
-const newProduct = {...product};
-newProduct.price /= 2;
-return newProduct;
+  const newProduct = {...product};
+  newProduct.price /= 2;
+  return newProduct;
 });
 console.log(newProduct);
 ```
@@ -486,20 +486,20 @@ Create a variable called `cheapProducts` that contains an array of objects for a
 
 ```js
 const products = [
-{ name: 'flower vase',   price: 75 },
-{ name: 'lamp',  price: 85 },
-{ name: 'jar of honey',   price: 95 },
-{ name: 'seashell frame', price: 65 },
-{ name: 'lumber',  price: 55 }
+  { name: 'flower vase',   price: 75 },
+  { name: 'lamp',  price: 85 },
+  { name: 'jar of honey',   price: 95 },
+  { name: 'seashell frame', price: 65 },
+  { name: 'lumber',  price: 55 }
 ];
-var totalPrice = product.filter(function(item) {
-const newProduct = {...product};
-newProduct.price<=70;
-return newProduct;
+  var totalPrice = product.filter(function(item) {
+    const newProduct = {...product};
+    newProduct.price<=70;
+    return newProduct;
+   
 
-
-});
-console.log(totalPrice);
+  });
+  console.log(totalPrice);
 
 ```
 
@@ -509,20 +509,20 @@ Create a variable called `totalPrice`, and use `.reduce` to get the sum of all p
 
 ```js
 const products = [
-{name: 'flower vase', price: 75},
-{name: 'lamp', price: 85},
-{name: 'jar of honey', price: 95},
-{name: 'coil', price: 65},
-{name: 'lumber', price: 55}
+  {name: 'flower vase', price: 75},
+  {name: 'lamp', price: 85},
+  {name: 'jar of honey', price: 95},
+  {name: 'coil', price: 65},
+  {name: 'lumber', price: 55}
 ];
 
-var totalPrice = productt.reduce(function(sum , item) {
-item.price+=item.price
-return item.price;
+ var totalPrice = productt.reduce(function(sum , item) {
+  item.price+=item.price
+  return item.price;
 
-});
+  });
 
-console.log(totalPrice);
+  console.log(totalPrice);
 
 
 ```
@@ -542,29 +542,29 @@ const panagrams = [ 'The','job', 'requires', 'extra', 'pluck', 'and', 'zeal', 'f
 ##### [every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
 
 function isbelowThreshold(smallNumss) {
-return smallNumss >= 0;
-}
-console.log(smallNumss.every(isbelowThreshold));
+    return smallNumss >= 0;
+  }
+  console.log(smallNumss.every(isbelowThreshold));
 
-function isBelowThreshold(numszl) {
-return numszl >= 0;
-}
+  function isBelowThreshold(numszl) {
+    return numszl >= 0;
+  }
 
-function shorterz(panagram) {
-return panagram.length <= 8;
-}
-console.log(panagram.every(shorterz));
+  function shorterz(panagram) {
+    return panagram.length <= 8;
+  }
+  console.log(panagram.every(shorterz));
 
 
-function shorter(panagrams) {
-return panagrams.length <= 8;
-}
-console.log(panagrams.every(shorter));
+  function shorter(panagrams) {
+    return panagrams.length <= 8;
+  }
+  console.log(panagrams.every(shorter));
 
 ##### [filter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 
-var resultz = smallNumss.filter(function(item) {
-return item<=100;  });
+  var resultz = smallNumss.filter(function(item) {
+    return item<=100;  });
 console.log(resultz);
 
 let resultr = panagram.filter(panagram => panagram.length %2== 0);
@@ -575,22 +575,22 @@ console.log(resultrz);
 
 ##### [find](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
 var found = smallNumss.find(function(element) {
-return (element%5==0);
-});
+    return (element%5==0);
+  });
+  
+  console.log(found);
+  var found2 = numszl.find(function(element) {
+    return (element%5==0);
+  });
+  
 
-console.log(found);
-var found2 = numszl.find(function(element) {
-return (element%5==0);
-});
+  const resul = panagram.find(panagram => panagram.length %2==0);
+  
+  console.log(resul);
 
-
-const resul = panagram.find(panagram => panagram.length %2==0);
-
-console.log(resul);
-
-const resu = panagrams.find(panagrams => panagrams.length %2==0);
-
-console.log(resu);
+  const resu = panagrams.find(panagrams => panagrams.length %2==0);
+  
+  console.log(resu);
 
 ##### [findIndex](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex)
 - Find the index of the first number that is divisible by 3
