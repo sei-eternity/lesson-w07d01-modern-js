@@ -121,19 +121,34 @@ function addFive(num) {
   return 5 + num;
 }
 
+
+.......
 function divide(num1, num2) {
   return num1 / num2;
 }
+
+  ........
 
 function whoIsTheBestIA() {
   let iaName = 'Alanoud';
   console.log(iaName);
 }
-```
+
 
 Your solution:
 
 ```js
+sol:
+ let addFive=num=>  5 + num;
+
+console.log(addFive(4)); 
+......
+sol: let divide=(num1, num2) => num1 / num2;
+  console.log(divide(4,4)); 
+  .....
+   sol: let whoIsTheBestIA=() =>{let iaName = 'Alanoud';
+    console.log(iaName);}
+    console.log(whoIsTheBestIA()); 
 
 ```
 
@@ -150,6 +165,16 @@ Your solution:
 Your solution:
 
 ```js
+let fullName=function(first,last){
+   return `${first} ${last}`
+}
+console.log(fullName('Ashwag','saud'));
+let fullName =(first,last)=> {return`${first} ${last}`}
+console.log(fullName('Ashwag','saud'));
+
+let fullName =(first,last)=> `${first} ${last}`
+console.log(fullName('Ashwag','saud'));
+
 
 ```
 
@@ -166,7 +191,10 @@ sayHello();
 Your solution:
 
 ```js
-
+let sayHello=(name = "World") =>  console.log("Hello " + name);
+  
+  
+  sayHello();
 ```
 
 **Resources:**
@@ -227,6 +255,10 @@ instructors.forEach(function(item){
 
     // For each friend in friends, print "Hi friendName!"
     // Write your solution here
+    const friends = ["Mansour", "Munira", "Ahmed"];
+friends.forEach(function(item){
+    console.log(`Hi ${item}`)
+})
     ```
 2. Crazy Numbers
     ```js
@@ -236,6 +268,13 @@ instructors.forEach(function(item){
 
     // Sum all the numbers in nums and save the result in total
     // Write your solution here
+    const nums = [103440, 3799.2663, 3.14159265359, 859494, 59439];
+let total = 0;
+nums.forEach(function(item){
+    total+=item;
+
+})
+console.log(total);
     ```
 3. Crazy number again!!
     ```js
@@ -243,11 +282,17 @@ instructors.forEach(function(item){
     const stringNumbers = ["103440", "3799.2663", "3.14159265359", "859494", "59439"];
     let totalNumbersUnder4000 = 0;
 
-    // Convert numbers from strings to numbers and 
-    // sum all numbers under 4000 and store them 
-    // in totalNumbersUnder4000
-    //
-    // Write your solution here
+    const stringNumbers = ["103440", "3799.2663", "3.14159265359", "859494", "59439"];
+let totalNumbersUnder4000 = 0;
+let k=parseFloat (stringNumbers);
+console.log(k);
+let m=[];
+for(let i=0;i<m.length;i++){
+    m.push(Integer.parseInt(str));
+    intarray[i]=Integer.parseInt(str)
+    console.log(m);
+    console.log(intarray);
+}
     ```
 
 **Resources:**
@@ -270,7 +315,10 @@ The `map()` method creates a new array with the results of calling a provided fu
     ```js
     const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     let times100 = [];
-
+  console.log(times100);
+    var times100 = nums.map(function (item) {
+        return item*100
+      }); 
     // Write your solution here
     ```
 2. Capitalize
@@ -280,24 +328,34 @@ The `map()` method creates a new array with the results of calling a provided fu
     const iAS = ['alanoud', 'khalid', 'shaima', 'hakami'];
     let capitalizedIAs = [];
 
+var capitalizedIAs = iAS.map(function (item) {
+    return item.toUpperCase();
+  });   
+    console.log(capitalizedIAs);
     // Write your solution here
     ```
 3. Abbreviations
     ```js
     const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
-    let dayAbbreviations = [];
+    
+let dayAbbreviations = days.map(function(item){
+    return item.slice(0,3);
 
-    // Find the abbreviation of all days and add them to dayAbbreviations array
-    // Write your solution here
+});console.log(dayAbbreviations);
     ```
 4. century20
     ```js
     const years = [1989, 2015, 2000, 1999, 2013, 1973, 2012];
     let century20 =  []; 
 
-    // century20 should be: [1989, 2000, 1999, 1973]
-    // Write your solution here
+  const years = [1989, 2015, 2000, 1999, 2013, 1973, 2012];
+let century20 = years.filter(function(item){
+    return item<=2000;
+   
+});
+
+console.log(century20);
     ```
 
 
@@ -315,8 +373,10 @@ The `filter()` method creates a new array with all elements that pass the test i
 1. Only get the numbers that are divisible by 3
     ```js
     const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    // Write your solution here
-    console.log(result);
+  var result = numss.filter(function(number) {
+    return (number % 3==0);
+  });
+console.log(result);
     ```
 2. Create an array of names (maybe use 3 of your friends)
 
@@ -327,16 +387,23 @@ The `filter()` method creates a new array with all elements that pass the test i
     3. Use implicit return
     ```js
     const names = ["Sara", "Abdulrahman", "Eman"];
-    // Write your solution here
-    console.log(result);
+  const names = ["Sara", "Abdulrahman", "Eman"];
+var result = names.filter(function(item) {
+    return item.includes("a");
+  });
+console.log(result);
     ```
 3. century20
     ```js
     const years = [1989, 2015, 2000, 1999, 2013, 1973, 2012];
     let century20 = []; 
 
-    // century20 should be: [1989, 2000, 1999, 1973]
-    // Write your solution here
+  var summ = numsz.reduce(function(sum,item) {
+    return sum+=item;
+  });
+
+console.log(summ);
+
     ```
 
 
@@ -366,6 +433,15 @@ The `reduce()` method executes a reducer function (that you provide) on each ele
     // Thats an array with crazy numbers we cant read 😯
     const nums = [103440, 3799.2663, 3.14159265359, 859494, 59439];
     let total = 0;
+    var totalNumbersUnderr4000 = stringNumberss.reduce(function(sum,item) {
+    totalNumbersUnderr4000=parseFloat(stringNumberss);
+    console.log(totalNumbersUnderr4000);
+    if(item<=4000){
+        sum+=item;
+    }
+  });
+
+console.log(totalNumbersUnderr4000);
 
     // Sum all the numbers in nums and save the result in total
     // Write your solution here
@@ -406,9 +482,13 @@ const products = [
   {name: 'lumber', price: 55}
 ];
 
-// Write your solution here
 
-console.log(discountProducts);
+let discountProducts = products.map(function(item){
+  const newProduct = {...product};
+  newProduct.price /= 2;
+  return newProduct;
+});
+console.log(newProduct);
 ```
 
 #### Filter
@@ -442,7 +522,14 @@ const products = [
   {name: 'lumber', price: 55}
 ];
 
-// Write your solution here
+  var totalPrice = product.filter(function(item) {
+    const newProduct = {...product};
+    newProduct.price<=70;
+    return newProduct;
+   
+
+  });
+  console.log(totalPrice);
 
 console.log(totalPrice);
 ```
